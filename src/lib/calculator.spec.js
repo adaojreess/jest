@@ -9,7 +9,7 @@ it('should sum 2 and 2 even if one f them is a string and the result must be 4',
 });
 it('should throw an error if what is provided to the method cannot be summed', () => {
     expect(() => {
-        sum('', '2');
+        sum('', "2");
     }).toThrowError();
 
     expect(() => {

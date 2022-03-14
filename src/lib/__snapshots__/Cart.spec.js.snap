@@ -18,7 +18,11 @@ Object {
       "quantity": 3,
     },
   ],
-  "total": 196392,
+  "total": Object {
+    "amount": 196392,
+    "currency": "BRL",
+    "precision": 2,
+  },
 }
 `;
 
@@ -40,6 +44,10 @@ Object {
       "quantity": 3,
     },
   ],
-  "total": 196392,
+  "total": Object {
+    "amount": 196392,
+    "currency": "BRL",
+    "precision": 2,
+  },
 }
 `;

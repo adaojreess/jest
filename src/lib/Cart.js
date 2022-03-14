@@ -3,15 +3,16 @@ import remove from 'lodash/remove';
 import Dinero from 'dinero.js';
 
 const calculatePercentageDiscount = (amount, item) => {
-  if (item.condition?.percentage && item.quantity >= item.condition?.minimum) {
+  if (item.condition?.percentage && item.quantity > item.condition?.minimum) {
     return amount.percentage(item.condition?.percentage);
   }
   return Money({ amount: 0 });
 };
 
 const calculateQuantityDiscount = (amount, item) => {
-  if (item.quantity >= item.condition?.quantity) {
-    return amount.percentage(50);
+  const isEven = item.quantity % 2 === 0;
+  if (item.quantity > item.condition?.quantity) {
+    return amount.percentage(isEven ? 50 : 40);
   }
   return Money({ amount: 0 });
 };
